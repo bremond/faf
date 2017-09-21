@@ -103,19 +103,200 @@ class faf_solvers():
         nsn_acJeanMoreau_fblsa.SolverOptions().iparam[13] = self._with_mumps;
         nsn_acJeanMoreau_fblsa.SolverOptions().iparam[3] = 10000000
 
-        nsn_acSTDGenerated = SiconosSolver(name="NSN-AlartCurnier-Generated",
-                                            gnuplot_name="NSN-AC-Generated-GP",
+        nsn_acSTDGenerated1 = SiconosSolver(name="NSN-AlartCurnier-Generated1",
+                                            gnuplot_name="NSN-AC-Generated-GP1",
                                             API=N.fc3d_nonsmooth_Newton_AlartCurnier,
                                             TAG=N.SICONOS_FRICTION_3D_NSN_AC,
                                             iparam_iter=N.SICONOS_IPARAM_ITER_DONE,
                                             dparam_err=1,
                                             maxiter=self._maxiter, precision=self._precision, with_guess=self._with_guess)
 
-        nsn_acSTDGenerated.SolverOptions().iparam[N.SICONOS_FRICTION_3D_NSN_FORMULATION] = 2;
-        nsn_acSTDGenerated.SolverOptions().iparam[N.SICONOS_FRICTION_3D_NSN_LINESEARCH] = N.SICONOS_FRICTION_3D_NSN_LINESEARCH_GOLDSTEINPRICE;
-        nsn_acSTDGenerated.SolverOptions().iparam[12] = self._maxiterls;
-        nsn_acSTDGenerated.SolverOptions().iparam[13] = self._with_mumps;
-        nsn_acSTDGenerated.SolverOptions().iparam[3] = 10000000
+        nsn_acSTDGenerated1.SolverOptions().iparam[N.SICONOS_FRICTION_3D_NSN_FORMULATION] = 2;
+        nsn_acSTDGenerated1.SolverOptions().iparam[N.SICONOS_FRICTION_3D_NSN_LINESEARCH] = N.SICONOS_FRICTION_3D_NSN_LINESEARCH_GOLDSTEINPRICE;
+        nsn_acSTDGenerated1.SolverOptions().iparam[12] = self._maxiterls;
+        nsn_acSTDGenerated1.SolverOptions().iparam[13] = self._with_mumps;
+        nsn_acSTDGenerated1.SolverOptions().iparam[3] = 10000000
+        nsn_acSTDGenerated1.SolverOptions().iparam[17] = 1
+
+        nsn_acSTDGenerated2 = SiconosSolver(name="NSN-AlartCurnier-Generated2",
+                                            gnuplot_name="NSN-AC-Generated-GP2",
+                                            API=N.fc3d_nonsmooth_Newton_AlartCurnier,
+                                            TAG=N.SICONOS_FRICTION_3D_NSN_AC,
+                                            iparam_iter=N.SICONOS_IPARAM_ITER_DONE,
+                                            dparam_err=1,
+                                            maxiter=self._maxiter, precision=self._precision, with_guess=self._with_guess)
+
+        nsn_acSTDGenerated2.SolverOptions().iparam[N.SICONOS_FRICTION_3D_NSN_FORMULATION] = 2;
+        nsn_acSTDGenerated2.SolverOptions().iparam[N.SICONOS_FRICTION_3D_NSN_LINESEARCH] = N.SICONOS_FRICTION_3D_NSN_LINESEARCH_GOLDSTEINPRICE;
+        nsn_acSTDGenerated2.SolverOptions().iparam[12] = self._maxiterls;
+        nsn_acSTDGenerated2.SolverOptions().iparam[13] = self._with_mumps;
+        nsn_acSTDGenerated2.SolverOptions().iparam[3] = 10000000
+        nsn_acSTDGenerated2.SolverOptions().iparam[17] = 3
+
+        nsn_acSTDGenerated3 = SiconosSolver(name="NSN-AlartCurnier-Generated3",
+                                            gnuplot_name="NSN-AC-Generated-GP3",
+                                            API=N.fc3d_nonsmooth_Newton_AlartCurnier,
+                                            TAG=N.SICONOS_FRICTION_3D_NSN_AC,
+                                            iparam_iter=N.SICONOS_IPARAM_ITER_DONE,
+                                            dparam_err=1,
+                                            maxiter=self._maxiter, precision=self._precision, with_guess=self._with_guess)
+
+        nsn_acSTDGenerated3.SolverOptions().iparam[N.SICONOS_FRICTION_3D_NSN_FORMULATION] = 2;
+        nsn_acSTDGenerated3.SolverOptions().iparam[N.SICONOS_FRICTION_3D_NSN_LINESEARCH] = N.SICONOS_FRICTION_3D_NSN_LINESEARCH_GOLDSTEINPRICE;
+        nsn_acSTDGenerated3.SolverOptions().iparam[12] = self._maxiterls;
+        nsn_acSTDGenerated3.SolverOptions().iparam[13] = self._with_mumps;
+        nsn_acSTDGenerated3.SolverOptions().iparam[3] = 10000000
+        nsn_acSTDGenerated3.SolverOptions().iparam[17] = 20
+
+
+        nsn_acSTDGenerated4 = SiconosSolver(name="NSN-AlartCurnier-Generated4",
+                                            gnuplot_name="NSN-AC-Generated-GP4",
+                                            API=N.fc3d_nonsmooth_Newton_AlartCurnier,
+                                            TAG=N.SICONOS_FRICTION_3D_NSN_AC,
+                                            iparam_iter=N.SICONOS_IPARAM_ITER_DONE,
+                                            dparam_err=1,
+                                            maxiter=self._maxiter, precision=self._precision, with_guess=self._with_guess)
+
+        nsn_acSTDGenerated4.SolverOptions().iparam[N.SICONOS_FRICTION_3D_NSN_FORMULATION] = 2;
+        nsn_acSTDGenerated4.SolverOptions().iparam[N.SICONOS_FRICTION_3D_NSN_LINESEARCH] = N.SICONOS_FRICTION_3D_NSN_LINESEARCH_GOLDSTEINPRICE;
+        nsn_acSTDGenerated4.SolverOptions().iparam[12] = self._maxiterls;
+        nsn_acSTDGenerated4.SolverOptions().iparam[13] = self._with_mumps;
+        nsn_acSTDGenerated4.SolverOptions().iparam[3] = 10000000
+        nsn_acSTDGenerated4.SolverOptions().iparam[17] = 1
+        nsn_acSTDGenerated4.SolverOptions().iparam[18] = 0
+
+        nsn_acSTDGenerated5 = SiconosSolver(name="NSN-AlartCurnier-Generated5",
+                                            gnuplot_name="NSN-AC-Generated-GP5",
+                                            API=N.fc3d_nonsmooth_Newton_AlartCurnier,
+                                            TAG=N.SICONOS_FRICTION_3D_NSN_AC,
+                                            iparam_iter=N.SICONOS_IPARAM_ITER_DONE,
+                                            dparam_err=1,
+                                            maxiter=self._maxiter, precision=self._precision, with_guess=self._with_guess)
+
+        nsn_acSTDGenerated5.SolverOptions().iparam[N.SICONOS_FRICTION_3D_NSN_FORMULATION] = 2;
+        nsn_acSTDGenerated5.SolverOptions().iparam[N.SICONOS_FRICTION_3D_NSN_LINESEARCH] = N.SICONOS_FRICTION_3D_NSN_LINESEARCH_GOLDSTEINPRICE;
+        nsn_acSTDGenerated5.SolverOptions().iparam[12] = self._maxiterls;
+        nsn_acSTDGenerated5.SolverOptions().iparam[13] = self._with_mumps;
+        nsn_acSTDGenerated5.SolverOptions().iparam[3] = 10000000
+        nsn_acSTDGenerated5.SolverOptions().iparam[17] = 3
+        nsn_acSTDGenerated5.SolverOptions().iparam[18] = 0
+
+        nsn_acSTDGenerated6 = SiconosSolver(name="NSN-AlartCurnier-Generated6",
+                                            gnuplot_name="NSN-AC-Generated-GP6",
+                                            API=N.fc3d_nonsmooth_Newton_AlartCurnier,
+                                            TAG=N.SICONOS_FRICTION_3D_NSN_AC,
+                                            iparam_iter=N.SICONOS_IPARAM_ITER_DONE,
+                                            dparam_err=1,
+                                            maxiter=self._maxiter, precision=self._precision, with_guess=self._with_guess)
+
+        nsn_acSTDGenerated6.SolverOptions().iparam[N.SICONOS_FRICTION_3D_NSN_FORMULATION] = 2;
+        nsn_acSTDGenerated6.SolverOptions().iparam[N.SICONOS_FRICTION_3D_NSN_LINESEARCH] = N.SICONOS_FRICTION_3D_NSN_LINESEARCH_GOLDSTEINPRICE;
+        nsn_acSTDGenerated6.SolverOptions().iparam[12] = self._maxiterls;
+        nsn_acSTDGenerated6.SolverOptions().iparam[13] = self._with_mumps;
+        nsn_acSTDGenerated6.SolverOptions().iparam[3] = 10000000
+        nsn_acSTDGenerated6.SolverOptions().iparam[17] = 20
+        nsn_acSTDGenerated6.SolverOptions().iparam[18] = 0
+
+
+#####
+        nsn_acSTDGenerated7 = SiconosSolver(name="NSN-AlartCurnier-Generated7",
+                                            gnuplot_name="NSN-AC-Generated-GP7",
+                                            API=N.fc3d_nonsmooth_Newton_AlartCurnier,
+                                            TAG=N.SICONOS_FRICTION_3D_NSN_AC,
+                                            iparam_iter=N.SICONOS_IPARAM_ITER_DONE,
+                                            dparam_err=1,
+                                            maxiter=self._maxiter, precision=self._precision, with_guess=self._with_guess)
+
+        nsn_acSTDGenerated7.SolverOptions().iparam[N.SICONOS_FRICTION_3D_NSN_FORMULATION] = 2;
+        nsn_acSTDGenerated7.SolverOptions().iparam[N.SICONOS_FRICTION_3D_NSN_LINESEARCH] = N.SICONOS_FRICTION_3D_NSN_LINESEARCH_GOLDSTEINPRICE;
+        nsn_acSTDGenerated7.SolverOptions().iparam[12] = self._maxiterls;
+        nsn_acSTDGenerated7.SolverOptions().iparam[13] = self._with_mumps;
+        nsn_acSTDGenerated7.SolverOptions().iparam[3] = 10000000
+        nsn_acSTDGenerated7.SolverOptions().iparam[17] = 1
+        nsn_acSTDGenerated7.SolverOptions().iparam[18] = 3
+
+        nsn_acSTDGenerated8 = SiconosSolver(name="NSN-AlartCurnier-Generated8",
+                                            gnuplot_name="NSN-AC-Generated-GP8",
+                                            API=N.fc3d_nonsmooth_Newton_AlartCurnier,
+                                            TAG=N.SICONOS_FRICTION_3D_NSN_AC,
+                                            iparam_iter=N.SICONOS_IPARAM_ITER_DONE,
+                                            dparam_err=1,
+                                            maxiter=self._maxiter, precision=self._precision, with_guess=self._with_guess)
+
+        nsn_acSTDGenerated8.SolverOptions().iparam[N.SICONOS_FRICTION_3D_NSN_FORMULATION] = 2;
+        nsn_acSTDGenerated8.SolverOptions().iparam[N.SICONOS_FRICTION_3D_NSN_LINESEARCH] = N.SICONOS_FRICTION_3D_NSN_LINESEARCH_GOLDSTEINPRICE;
+        nsn_acSTDGenerated8.SolverOptions().iparam[12] = self._maxiterls;
+        nsn_acSTDGenerated8.SolverOptions().iparam[13] = self._with_mumps;
+        nsn_acSTDGenerated8.SolverOptions().iparam[3] = 10000000
+        nsn_acSTDGenerated8.SolverOptions().iparam[17] = 3
+        nsn_acSTDGenerated8.SolverOptions().iparam[18] = 3
+
+        nsn_acSTDGenerated9 = SiconosSolver(name="NSN-AlartCurnier-Generated9",
+                                            gnuplot_name="NSN-AC-Generated-GP9",
+                                            API=N.fc3d_nonsmooth_Newton_AlartCurnier,
+                                            TAG=N.SICONOS_FRICTION_3D_NSN_AC,
+                                            iparam_iter=N.SICONOS_IPARAM_ITER_DONE,
+                                            dparam_err=1,
+                                            maxiter=self._maxiter, precision=self._precision, with_guess=self._with_guess)
+
+        nsn_acSTDGenerated9.SolverOptions().iparam[N.SICONOS_FRICTION_3D_NSN_FORMULATION] = 2;
+        nsn_acSTDGenerated9.SolverOptions().iparam[N.SICONOS_FRICTION_3D_NSN_LINESEARCH] = N.SICONOS_FRICTION_3D_NSN_LINESEARCH_GOLDSTEINPRICE;
+        nsn_acSTDGenerated9.SolverOptions().iparam[12] = self._maxiterls;
+        nsn_acSTDGenerated9.SolverOptions().iparam[13] = self._with_mumps;
+        nsn_acSTDGenerated9.SolverOptions().iparam[3] = 10000000
+        nsn_acSTDGenerated9.SolverOptions().iparam[17] = 20
+        nsn_acSTDGenerated9.SolverOptions().iparam[18] = 3
+
+
+        nsn_acSTDGenerated10 = SiconosSolver(name="NSN-AlartCurnier-Generated10",
+                                            gnuplot_name="NSN-AC-Generated-GP10",
+                                            API=N.fc3d_nonsmooth_Newton_AlartCurnier,
+                                            TAG=N.SICONOS_FRICTION_3D_NSN_AC,
+                                            iparam_iter=N.SICONOS_IPARAM_ITER_DONE,
+                                            dparam_err=1,
+                                            maxiter=self._maxiter, precision=self._precision, with_guess=self._with_guess)
+
+        nsn_acSTDGenerated10.SolverOptions().iparam[N.SICONOS_FRICTION_3D_NSN_FORMULATION] = 2;
+        nsn_acSTDGenerated10.SolverOptions().iparam[N.SICONOS_FRICTION_3D_NSN_LINESEARCH] = N.SICONOS_FRICTION_3D_NSN_LINESEARCH_GOLDSTEINPRICE;
+        nsn_acSTDGenerated10.SolverOptions().iparam[12] = self._maxiterls;
+        nsn_acSTDGenerated10.SolverOptions().iparam[13] = self._with_mumps;
+        nsn_acSTDGenerated10.SolverOptions().iparam[3] = 10000000
+        nsn_acSTDGenerated10.SolverOptions().iparam[17] = 1
+        nsn_acSTDGenerated10.SolverOptions().iparam[18] = 1
+
+        nsn_acSTDGenerated11 = SiconosSolver(name="NSN-AlartCurnier-Generated11",
+                                            gnuplot_name="NSN-AC-Generated-GP11",
+                                            API=N.fc3d_nonsmooth_Newton_AlartCurnier,
+                                            TAG=N.SICONOS_FRICTION_3D_NSN_AC,
+                                            iparam_iter=N.SICONOS_IPARAM_ITER_DONE,
+                                            dparam_err=1,
+                                            maxiter=self._maxiter, precision=self._precision, with_guess=self._with_guess)
+
+        nsn_acSTDGenerated11.SolverOptions().iparam[N.SICONOS_FRICTION_3D_NSN_FORMULATION] = 2;
+        nsn_acSTDGenerated11.SolverOptions().iparam[N.SICONOS_FRICTION_3D_NSN_LINESEARCH] = N.SICONOS_FRICTION_3D_NSN_LINESEARCH_GOLDSTEINPRICE;
+        nsn_acSTDGenerated11.SolverOptions().iparam[12] = self._maxiterls;
+        nsn_acSTDGenerated11.SolverOptions().iparam[13] = self._with_mumps;
+        nsn_acSTDGenerated11.SolverOptions().iparam[3] = 10000000
+        nsn_acSTDGenerated11.SolverOptions().iparam[17] = 3
+        nsn_acSTDGenerated11.SolverOptions().iparam[18] = 1
+
+        nsn_acSTDGenerated12 = SiconosSolver(name="NSN-AlartCurnier-Generated12",
+                                            gnuplot_name="NSN-AC-Generated-GP12",
+                                            API=N.fc3d_nonsmooth_Newton_AlartCurnier,
+                                            TAG=N.SICONOS_FRICTION_3D_NSN_AC,
+                                            iparam_iter=N.SICONOS_IPARAM_ITER_DONE,
+                                            dparam_err=1,
+                                            maxiter=self._maxiter, precision=self._precision, with_guess=self._with_guess)
+
+        nsn_acSTDGenerated12.SolverOptions().iparam[N.SICONOS_FRICTION_3D_NSN_FORMULATION] = 2;
+        nsn_acSTDGenerated12.SolverOptions().iparam[N.SICONOS_FRICTION_3D_NSN_LINESEARCH] = N.SICONOS_FRICTION_3D_NSN_LINESEARCH_GOLDSTEINPRICE;
+        nsn_acSTDGenerated12.SolverOptions().iparam[12] = self._maxiterls;
+        nsn_acSTDGenerated12.SolverOptions().iparam[13] = self._with_mumps;
+        nsn_acSTDGenerated12.SolverOptions().iparam[3] = 10000000
+        nsn_acSTDGenerated12.SolverOptions().iparam[17] = 20
+        nsn_acSTDGenerated12.SolverOptions().iparam[18] = 1
+
+#####        
 
         nsn_acSTDGenerated_nls = SiconosSolver(name="NSN-AlartCurnier-Generated-NLS",
                                                 gnuplot_name="NSN-AC-Generated",
@@ -400,7 +581,7 @@ class faf_solvers():
                                        maxiter=self._maxiter, precision=self._precision, with_guess=self._with_guess)
 
 
-        nsn_solvers =  [nsn_acSTD, nsn_acSTD_nls, nsn_acSTDGenerated, nsn_acSTDGenerated_nls,  nsn_ac_fpp, nsn_ac_eg, nsn_acSTD_fblsa,
+        nsn_solvers =  [nsn_acSTD, nsn_acSTD_nls, nsn_acSTDGenerated1, nsn_acSTDGenerated2, nsn_acSTDGenerated3, nsn_acSTDGenerated4, nsn_acSTDGenerated5, nsn_acSTDGenerated6, nsn_acSTDGenerated7, nsn_acSTDGenerated8, nsn_acSTDGenerated9, nsn_acSTDGenerated10, nsn_acSTDGenerated11, nsn_acSTDGenerated12, nsn_acSTDGenerated_nls,  nsn_ac_fpp, nsn_ac_eg, nsn_acSTD_fblsa,
                         nsn_acJeanMoreau, nsn_acJeanMoreau_nls, nsn_acJeanMoreauGenerated, nsn_acJeanMoreauGenerated_lusol, nsn_acJeanMoreau_fblsa,
                         nsn_acJeanMoreauGenerated_nls, nsn_acJeanMoreauGenerated_nls_lusol,
                         nsn_fb_gp, nsn_fb_gp_lusol, nsn_fb_nls, nsn_fb_nls_lusol, nsn_fb_fblsa,
