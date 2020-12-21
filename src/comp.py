@@ -15,6 +15,7 @@ import os
 import h5py
 import getopt
 import sys
+import csv
 import hashlib
 try:
     from mpi4py import MPI
@@ -237,7 +238,7 @@ class Caller():
 
             with h5py.File(output_filename, 'w') as output:
 
-                digest = hashlib.sha256(open(filename, 'rb').read()).digest()
+                digest = str(hashlib.sha256(open(filename, 'rb').read()).hexdigest())
                
                 create_attrs_in_comp_file(output,precision,utimeout,os.uname()[1],measure_name)
 
@@ -285,6 +286,15 @@ class Caller():
                 with open('report.txt', "a") as report_file:
                     print   (list_print, file=report_file)
 
+                with open('report.csv', 'a', newline='') as csv_f:
+                    fieldnames = ['solver']
+                    fieldnames.extend(attrs.keys())
+                    writer = csv.DictWriter(csv_f, fieldnames=fieldnames)
+                    if csv_f.tell() == 0:
+                        writer.writeheader()
+                    d = attrs
+                    d['solver'] = solver.name()
+                    writer.writerow(d)
 
 #    @timeout(utimeout)
     def _internal_call(self, solver, problem, filename, pfilename, output_filename):
@@ -312,7 +322,7 @@ class Caller():
             flpops = None
             mflops = None
 
-            digest = hashlib.sha256(open(filename, 'rb').read()).digest()
+            digest = str(hashlib.sha256(open(filename, 'rb').read()).hexdigest())
 
             if psize is not None:
                 solver_problem_data.create_dataset(np.string_('reactions'),
@@ -509,6 +519,15 @@ class Caller():
             with open('report.txt', "a") as report_file:
                 print   (list_print, file=report_file)
 
+            with open('report.csv', 'a', newline='') as csv_f:
+                fieldnames = ['solver']
+                fieldnames.extend(attrs.keys())
+                writer = csv.DictWriter(csv_f, fieldnames=fieldnames)
+                if csv_f.tell() == 0:
+                    writer.writeheader()
+                d = attrs
+                d['solver'] = solver.name()
+                writer.writerow(d)
 
 
 
